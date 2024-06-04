@@ -19,7 +19,7 @@ import time
 
 #Pulled from HTTP Request
 timestr = time.strftime("%Y%m%d_%H%M%S")
-logging.basicConfig(filename=f'CheckInAPI_{timestr}.log', filemode='w', level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+logging.basicConfig(filename=f'checkin_{timestr}.log', filemode='w', level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
 
 class MCLine(Flowable):
@@ -215,7 +215,7 @@ def main(ticket_id):
     # if config.ticket['userid'] not in seen_ids:
     resp_json = get_assets_for_user(user_id=config.ticket['userid'])
     form_assets_csv(resp_json=resp_json)
-    config.path['pdf'] = 'Docs/' + config.ticket['username'] + '_CheckIn_Doc.pdf'
+    config.path['pdf'] = 'Docs/' + config.ticket['username'] + '_checkin_doc.pdf'
     make_pdf(filename=config.path['csv'],username=config.ticket['username'],fullName=config.ticket['fullname'],location=config.ticket['location'])
     filename = config.path['pdf']
     try:
