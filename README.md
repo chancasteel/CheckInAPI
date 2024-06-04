@@ -112,7 +112,7 @@ Main function to create the check-in document for a given ticket ID.
 Posts a comment on the ticket with a link to the generated PDF.
 
 ## Logging
-Logging is configured to write to files named `CheckInAPI_<timestamp>.log` and `CommentPost_<timestamp>.log` in the working directory, recording the process flow and any errors encountered.
+Logging is configured to write to files named `checkin_<timestamp>.log` and `comment_post_<timestamp>.log` in the working directory, recording the process flow and any errors encountered.
 
 ## Example
 To create a PDF for ticket ID `12345`, run:
