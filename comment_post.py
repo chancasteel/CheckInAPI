@@ -14,7 +14,7 @@ from reportlab.platypus import *
 import time
 
 timestr = time.strftime("%m-%d-%Y-%H:%M:%S")
-logging.basicConfig(filename=f'CommentPost_{timestr}.log', filemode='w', level=logging.DEBUG, format="%(asctime)s %(levelname)s %(message)s")
+logging.basicConfig(filename=f'comment_post_{timestr}.log', filemode='w', level=logging.DEBUG, format="%(asctime)s %(levelname)s %(message)s")
 
 
 def main(file_url, ticket_url):
